@@ -3,11 +3,8 @@
 #include<graphics.h>
 #include<conio.h>
 
-int main()
+void target()
 {
-int gd=0,gm;
-initgraph(&gd,&gm,"C://TURBOC3/BGI");
-
 setcolor(WHITE);
 setfillstyle(SOLID_FILL,WHITE);
 circle(450,150,50);
@@ -31,7 +28,9 @@ floodfill(450,150,YELLOW);
 setcolor(BROWN);
 line(400,150,400,250);
 line(500,150,500,250);
-
+}
+void bow()
+{
 setcolor(WHITE);
 line(81,285,75,340);
 line(75,340,125,375);
@@ -45,6 +44,13 @@ line(75,340,70,337);
 line(75,340,74,347);
 line(165,296,155,295);
 line(165,296,160,305);
+}
+int main()
+{
+int gd=0,gm;
+initgraph(&gd,&gm,"C://TURBOC3/BGI");
+target();
+bow();
 
 getch();
 return 0;
